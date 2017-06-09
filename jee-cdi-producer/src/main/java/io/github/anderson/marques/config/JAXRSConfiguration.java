@@ -1,4 +1,4 @@
-package me.marques.anderson.configuracao;
+package io.github.anderson.marques.config;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

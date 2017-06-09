@@ -1,4 +1,4 @@
-package me.marques.anderson.dominio;
+package io.github.anderson.marques.domain;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;
@@ -14,5 +14,5 @@ import javax.inject.Qualifier;
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ METHOD, FIELD, PARAMETER, TYPE })
-public @interface DaAplicacao {
+public @interface FromApplicationScope {
 }

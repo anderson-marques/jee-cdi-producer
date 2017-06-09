@@ -1,4 +1,4 @@
-package me.marques.anderson.filtros;
+package io.github.anderson.marques.filters;
 
 import java.io.IOException;
 
@@ -11,10 +11,10 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 
-import me.marques.anderson.dominio.Pojo;
+import io.github.anderson.marques.domain.Pojo;
 
 @WebFilter("/*")
-public class Filtro implements Filter {
+public class CDIScopesFilter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
@@ -22,21 +22,18 @@ public class Filtro implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 
 		Pojo pojo1 = new Pojo();
-		pojo1.setMensagem("ola mundo requisicao");
+		pojo1.setMessage("Hello Request");
 		req.setAttribute("pojo", pojo1);
 
 		Pojo pojo2 = new Pojo();
-		pojo2.setMensagem("ola mundo sessão");
+		pojo2.setMessage("Hello Session");
 		req.getSession().setAttribute("pojo", pojo2);
 
 		Pojo pojo3 = new Pojo();
-		pojo3.setMensagem("ola mundo da aplicacao");
+		pojo3.setMessage("Hello Application");
 		req.getServletContext().setAttribute("pojo", pojo3);
 
 		chain.doFilter(request, response);
-	}
-
-	public Filtro() {
 	}
 
 	public void destroy() {

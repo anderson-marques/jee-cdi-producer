@@ -1,12 +1,8 @@
 ##### JEE-CDI-PRODUCER
 
-Projeto de exemplo de produtor de objetos oriundos dos escopos web: request, session e application.
+Project example of object producers from web scopes: request, session and application.
 
-Esse padrão visa facilitar a injeção de dependencias de objetos de-para os escopos web, sem tratar diretamente o contexto.
-
-
-
-
+This pattern want facilitate the Dependency Injection of objects from-to web scopes context.
 
 ###### Autor: Anderson Marques
-###### Versão: 1.0.0-OK
+###### Versão: 1.0.1-OK
